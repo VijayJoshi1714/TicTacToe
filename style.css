@@ -1,0 +1,75 @@
+body {
+    background-color: #1589FF;
+    font-family: 'Montserrat';
+    user-select: none;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.cells {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+}
+
+.cell {
+    color: white;
+    padding: 40px;
+    font-size: 36px;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    height: 40px;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n) {
+    border-right: none;
+}
+
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+
+.cell:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.restartBtn {
+    margin-top: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.restartBtn img {
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 15%;
+    height: auto;
+}
+
+.winner-message {
+    position: absolute;
+    top: 70px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    display: none;
+    /* Initially hidden */
+}
